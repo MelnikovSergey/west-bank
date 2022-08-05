@@ -1,106 +1,92 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-<!--
-<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
-<script type="text/javascript" src="js/opendoor.js"></script>
-<script type="text/javascript" src="js/closedoor.js"></script>
-<script type="text/javascript" src="js/personanimate.js"></script>
-<script type="text/javascript" src="js/controls.js"></script>
--->
-<script type="text/javascript" src="js/script.js"></script>
-<title>West Bank</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<title>West Bank</title>
 </head>
-
 <body>
-<div id="container">
-  
- <div id="top"> <!-интерфейс (верх)->
+	<div id="container">
+	  
+		<div id="top"> <!-интерфейс (верх)->
+			<table id="left"> 
+	
+				<tr>
+					<th class="list">1</th>
+					<th class="list">2</th>
+					<th class="list">3</th>
+					<th class="list">4</th>
+					<th class="list">5</th>
+					<th class="list">6</th>
+				</tr>
 
- <table id="left"> 
+				<tr>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+				</tr>
 
- <tr>
-  <th class="list">1</th>
-  <th class="list">2</th>
-  <th class="list">3</th>
-  <th class="list">4</th>
-  <th class="list">5</th>
-  <th class="list">6</th>
- </tr>
+			</table>
+	
+			<table id="right"> 
+	
+				<tr>
+					<th class="list">7</th>
+					<th class="list">8</th>
+					<th class="list">9</th>
+					<th class="list">10</th>
+					<th class="list">11</th>
+					<th class="list">12</th>
+				</tr>
+	
+				<tr id="dollar">
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+					<th class="dollar">$</th>
+				</tr>
 
- <tr>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
- </tr>
+			</table>
+	
+			<div id="dollar_center"> <!-центральный элемент верху-> </div>
+	
+		</div>
+	 
+		<div id="game_zone"> <!-игровое поле->
+			<div id="door_1" class="door"> </div><!-левая дверь->
+			<div id="door_2" class="door"> </div><!-средняя дверь->
+			<div id="door_3" class="door"> </div><!-правая дверь->
+		</div>
+	
+		<div id="floor"> <!-пол-> </div>
+		<div id="pay-desk"> <!-касса-> </div>
+		<div id="bottom"> <!-интерфейс (низ)-> </div>
+	
+		<button id="start">Старт</button>
+	
+		<!--[if gte IE7]>
+		    <style type="text/css">
+			form {width:126px;}
+		    </style>
+		<![endif]-->
+	
+		<div id="game_sprite"> <!-спрайты->
+			<div id="sprite_1" class="sprite_door"> </div><!-левая дверь->
+			<div id="sprite_2" class="sprite_door" class="sprite_people"> </div><!-средняя дверь->
+			<div id="sprite_3" class="sprite_door" class="sprite_people"> </div><!-правая дверь->
+			<div id="people_1" class="sprite_people"> </div><!-персонаж из левой двери->
+			<div id="people_2" class="sprite_people"> </div><!-персонаж из средней двери->
+			<div id="people_3" class="sprite_people"> </div><!-персонаж из правой двери->
+		</div>
+	
+	</div>
+	
+	<script type="text/javascript" src="js/script.js"></script>
 
- </table>
-
- <table id="right"> 
-
- <tr>
-  <th class="list">7</th>
-  <th class="list">8</th>
-  <th class="list">9</th>
-  <th class="list">10</th>
-  <th class="list">11</th>
-  <th class="list">12</th>
- </tr>
-
- <tr id="dollar">
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
-  <th class="dollar">$</th>
- </tr>
-
- </table>
-
-   <div id="dollar_center"> <!-центральный элемент верху->
-   </div>
-
- </div>
- 
- <div id="game_zone"> <!-игровое поле->
-    <div id="door_1" class="door"> </div><!-левая дверь->
-    <div id="door_2" class="door"> </div><!-средняя дверь->
-    <div id="door_3" class="door"> </div><!-правая дверь->
- </div>
-
- <div id="floor"> <!-пол->
- </div>
-
- <div id="pay-desk"> <!-касса->
- </div>
-
- <div id="bottom"> <!-интерфейс (низ)->
- </div>
-
- <button id="start">Старт</button>
-
-<!--[if gte IE7]>
- <style type="text/css">
-   form{width:126px;}
- </style>
-<![endif]-->
-
- <div id="game_sprite"> <!-спрайты->
-    <div id="sprite_1" class="sprite_door"> </div><!-левая дверь->
-    <div id="sprite_2" class="sprite_door" class="sprite_people"> </div><!-средняя дверь->
-    <div id="sprite_3" class="sprite_door" class="sprite_people"> </div><!-правая дверь->
-    <div id="people_1" class="sprite_people"> </div><!-персонаж из левой двери->
-    <div id="people_2" class="sprite_people"> </div><!-персонаж из средней двери->
-    <div id="people_3" class="sprite_people"> </div><!-персонаж из правой двери->
- </div>
-
-</div>
 </body>
-
 </html>

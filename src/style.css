@@ -1,102 +1,102 @@
-*{
- margin:0; 
- padding:0;
+* {
+	margin: 0; 
+	padding: 0;
  }
 
-body{
-margin:0; 
-padding:0;
-background-color:#000;
+body {
+	margin: 0; 
+	padding: 0;
+	background-color: #000;
 }
 
-#container{
-position:absolute;
-top:0;
-left:28%;
-padding:20px;
-width:538px;
-height:464px;
-border:6px solid #fff;
+#container {
+	position: absolute;
+	top: 0;
+	left: 28%;
+	padding: 20px;
+	width: 538px;
+	height: 464px;
+	border: 6px solid #fff;
 }
 
-#top{
-margin:0;
-padding:0;
-height:50px;
-border:1px solid #069;
+#top {
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	border: 1px solid #069;
 }
 
-table{
-color:#fff;
-border-collapse:collapse;
+table {
+	color: #fff;
+	border-collapse: collapse;
 }
 
-#left{
-float:left;
-margin-left:24px;
+#left {
+	float: left;
+	margin-left: 24px;
 }
 
-#right{
-float:right;
-margin-right:24px;
+#right {
+	float:right;
+	margin-right:24px;
 }
 
-tr,th{
-width:24px;
-height:14px;
+tr,th {
+	width: 24px;
+	height: 14px;
 }
 
-tr .list{
-font-size:12px;
-background-color:red;
+tr .list {
+	font-size: 12px;
+	background-color: red;
 }
 
-tr .dollar{
-background-color:blue;
-border:1px solid #fff;
-height:24px;
+tr .dollar {
+	background-color: blue;
+	border: 1px solid #fff;
+	height: 24px;
 }
 
-#dollar_center{
-margin:0 auto; 
-padding:0;
-width:52px;
-height:48px;
-background-image: url(images/top.gif);
+#dollar_center {
+	margin: 0 auto; 
+	padding: 0;
+	width: 52px;
+	height: 48px;
+	background-image: url(images/top.gif);
 }
 
-#game_zone{
-margin:0;
-padding:0;
-padding-left:32px;
-height:204px;
-background-image: url(images/bground.gif);
-background-repeat: repeat-x;
+#game_zone {
+	margin: 0;
+	padding: 0;
+	padding-left: 32px;
+	height: 204px;
+	background-image: url(images/bground.gif);
+	background-repeat: repeat-x;
 }
 
-.door{
-background-image: url(images/door.gif);
-background-repeat: no-repeat;
-width:136px;
-height:204px;
-float:left;
-padding-left:32px;
+.door {
+	background-image: url(images/door.gif);
+	background-repeat: no-repeat;
+	width: 136px;
+	height: 204px;
+	float: left;
+	padding-left: 32px;
 }
 
-.sprite_door{
-background-image: url(images/door_sprite.png);
-background-position: 0px 0px;
-background-repeat: no-repeat;
-width:136px;
-height:188px;
+.sprite_door {
+	background-image: url(images/door_sprite.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	width: 136px;
+	height: 188px;
 }
 
-.sprite_people{
-background-image: url(images/sprites.png);
-background-position: 2px 6px;
-background-repeat: no-repeat;
-width:110px;
-height:175px;
+.sprite_people {
+	background-image: url(images/sprites.png);
+	background-position: 2px 6px;
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 175px;
 }
 
 .bandit {
@@ -111,88 +111,88 @@ height:175px;
 	background-position: -895px 6px;
 }
 
-.sexbomboy {
+.bombBoyBoomer {
 	background-position: 2px -172px;
 }
 
-.sprite_door:hover{
-background-image: url(images/door_sprite.png);
-background-position: 0px -186px;
-background-position: 0px -372px;
-background-repeat: no-repeat;
-width:136px;
-height:180px;
+.sprite_door:hover {
+	background-image: url(images/door_sprite.png);
+	background-position: 0px -186px;
+	background-position: 0px -372px;
+	background-repeat: no-repeat;
+	width: 136px;
+	height: 180px;
 }
 
-#sprite_1{
-position:absolute;
-top:86px;
-left:64px;
-z-index:2;
+#sprite_1 {
+	position: absolute;
+	top: 86px;
+	left: 64px;
+	z-index: 2;
 }
 
-#sprite_2{
-position:absolute;
-top:86px;
-left:232px;
-z-index:2;
+#sprite_2 {
+	position: absolute;
+	top: 86px;
+	left: 232px;
+	z-index: 2;
 }
 
-#sprite_3{
-position:absolute;
-top:86px;
-left:400px;
-z-index:2;
+#sprite_3 {
+	position: absolute;
+	top: 86px;
+	left: 400px;
+	z-index: 2;
 }
 
-#people_1{
-position:absolute;
-top:86px;
-left:64px;
-z-index:1;
+#people_1 {
+	position: absolute;
+	top: 86px;
+	left: 64px;
+	z-index: 1;
 }
 
-#people_2{
-position:absolute;
-top:86px;
-left:232px;
-z-index:1;
+#people_2 {
+	position: absolute;
+	top: 86px;
+	left: 232px;
+	z-index: 1;
 }
 
-#people_3{
-position:absolute;
-top:86px;
-left:400px;
-z-index:1;
+#people_3 {
+	position: absolute;
+	top: 86px;
+	left: 400px;
+	z-index: 1;
 }
 
-#floor{
-margin:0;
-padding:0;
-height:46px;
-background-image: url(images/floor.jpg);
-background-repeat: repeat-x;
+#floor {
+	margin: 0;
+	padding: 0;
+	height: 46px;
+	background-image: url(images/floor.jpg);
+	background-repeat: repeat-x;
 }
 
-#pay-desk{
-margin:0;
-padding:0;
-height:56px;
-background-image: url(images/bank.gif);
-background-repeat: repeat-x;
+#pay-desk {
+	margin: 0;
+	padding: 0;
+	height: 56px;
+	background-image: url(images/bank.gif);
+	background-repeat: repeat-x;
 }
  
-#bottom{
-margin:0;
-padding:0;
-height:75px;
-border:1px solid #069;
+#bottom {
+	margin: 0;
+	padding: 0;
+	height: 75px;
+	border: 1px solid #069;
 }
 
-#start{
-margin:12px 0;
+#start {
+	margin: 12px 0;
 }
 
-#pause{
-margin-left:5px;
+#pause {
+	margin-left: 5px;
 }
