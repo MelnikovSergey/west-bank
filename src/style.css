@@ -115,6 +115,14 @@ tr .dollar {
 	background-position: 2px -172px;
 }
 
+.wound {
+	background-color: #ff0000;
+	-moz-opacity: 0.70;
+	opacity: .70;
+	filter: alpha(opacity=70);
+	zoom: 1;  /* Fix for IE7 */
+}
+
 .sprite_door:hover {
 	background-image: url(images/door_sprite.png);
 	background-position: 0px -186px;

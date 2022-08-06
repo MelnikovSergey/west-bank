@@ -127,6 +127,9 @@
 	var roundStatistics = 0;
 	var selectDoorsNumber = null;
 
+	// Game Zone
+	var bank = document.getElementById('container');
+
 	// Doors
 	var door1 = document.getElementById('sprite_1');
 	var door2 = document.getElementById('sprite_2');
@@ -208,7 +211,8 @@
 	}
 
 	function bankWorkerWound() {
-		alert('Bank worker wound!');
+		bank.className += 'wound';
+		console.log('Bank worker wound!');
 	}
 
 	function gameOver() {
