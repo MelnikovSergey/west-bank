@@ -78,37 +78,44 @@
 	function uploadCustomers() {
 		createCustomersArray();
 
-		customer1.className += " " + roundCustomersArray[1];
-		customer2.className += " " + roundCustomersArray[2];
-		customer3.className += " " + roundCustomersArray[3];
+		customer1.className += " " + roundCustomersArray[0].cssClass;
+		customer2.className += " " + roundCustomersArray[1].cssClass;
+		customer3.className += " " + roundCustomersArray[2].cssClass;
 	}
 
-	function customerAnimate(person, personDoor){
+	function customerAnimate(person, personDoor, time, fps) {
 
-		var x = person[0];
+		var frames = fps || 50; 
+		var clock = time || 360; 
+		var steps = clock / (1000 / frames);
+   
+		// ...
+	  
+		var timer = setInterval(function() {
+			
+			// ...
+			person.style.backgroundPositionX = x + 'px';
 
-		function frame(){
-			x -= person[1];
-			personDoor.style.backgroundPositionX = x + 'px';
-			if(x == person[2]){
+			// ...
+			steps--;
+	    
+			if(steps <= 0) {
 				clearInterval(timer);
 			}
-		}
-
-		var timer = setInterval(frame, 350);
+		}, (1000 / fps));
 	}
 
 	document.onkeydown = function(event) {
 		if(event.keyCode == 49) {
-			customerAnimate(eval(roundCustomersArray[0]), customer1);
+			customerAnimate(roundCustomersArray[0], customer1);
 			console.log('Shoot in the first door');
 		}
 		else if(event.keyCode == 50) {
-			customerAnimate(eval(roundCustomersArray[1]), customer2);
+			customerAnimate(roundCustomersArray[1], customer2);
 			console.log('Shoot in the second door');
 		}
 		else if(event.keyCode == 51) {
-			customerAnimate(eval(roundCustomersArray[2]), customer3);
+			customerAnimate(roundCustomersArray[2], customer3);
 			console.log('Shoot in the third door');
 		}
 	}
@@ -132,16 +139,45 @@
 	var customer2 = document.getElementById('people_2');
 	var customer3 = document.getElementById('people_3');	
 
-	var customersArray = [ 'woman', 'man', 'bandit', 'bombBoyBoomer', 'dollarBoyBoomer', 'renegade' ];
-	var roundCustomersArray = new Array(3);
+	// Customers data: start position, step, final position
+	var bandit = { 
+		positionsData: [ 0, -114, -228  ],
+		positionsDataLength: 3,
+		cssClass: 'bandit' 
+	};
 
-	// Customers data: start position, step, final position, container
-	var woman = [684, 114, 798];
-	var man = [912, 114, 228];
-	var bandit = [0, 114, 228];
-	var bombBoyBoomer = [0, 114, 912];
-	var dollarBoyBoomer = [0, 114, 912];
-	var renegade = [0, 114, 228];
+	var woman = { 
+		positionsData: [ -684, -114, -798 ],
+		positionsDataLength: 3,
+		cssClass: 'woman' 
+	};
+
+	var man = { 
+		positionsData: [ -912, -114, -228 ],
+		positionsDataLength: 3,
+		cssClass: 'man' 
+	};
+
+	var bombBoyBoomer = { 
+		positionsData: [ 0, -114, -912 ],
+		positionsDataLength: 3, 
+		cssClass: 'bombBoyBoomer' 
+	};
+
+	var dollarBoyBoomer = { 
+		positionsData: [ 0, 114, 912 ],
+		positionsDataLength: 3, 
+		cssClass: 'dollarBoyBoomer' 
+	};
+
+	var renegade = { 
+		positionsData: [ 0, 114, 228 ],
+		positionsDataLength: 3, 
+		cssClass: 'renegade' 
+	};
+
+	var customersArray = [ woman, man, bandit, bombBoyBoomer, dollarBoyBoomer, renegade ];
+	var roundCustomersArray = new Array(3)
 
 	// Button
 	var startButton = document.getElementById('start');
@@ -158,10 +194,11 @@
 	output = function() {
 		if(true) {
 			// ...
+			// ...
 			closeSelectDoors(selectDoorsNumber);
 			setTimeout(restartRound, clock);
 		} else {
-			// ...
+			bankWorkerWound();
 			bankWorkerCount--;
 		}
 	}
@@ -170,6 +207,9 @@
 		startGame();
 	}
 
+	function bankWorkerWound() {
+		alert('Bank worker wound!');
+	}
 
 	function gameOver() {
 		alert('Game Over');
