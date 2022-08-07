@@ -106,6 +106,7 @@
 	}
 
 	document.onkeydown = function(event) {
+		// 1, 2, 3 
 		if(event.keyCode == 49) {
 			customerAnimate(roundCustomersArray[0], customer1);
 			console.log('Shoot in the first door');
@@ -117,6 +118,15 @@
 		else if(event.keyCode == 51) {
 			customerAnimate(roundCustomersArray[2], customer3);
 			console.log('Shoot in the third door');
+		}
+		// Left, right
+		if(event.keyCode == 37) {
+			selectDoors();
+			console.log('Left door');
+		}
+		else if(event.keyCode == 39) {
+			selectDoors();
+			console.log('Right door');
 		}
 	}
 
@@ -228,7 +238,7 @@
 	}
 
 	function selectDoors() {
-		// ...
+		// Take a decision on the number of doors
 	}
 
 	function completedTransaction() {
