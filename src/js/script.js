@@ -215,6 +215,26 @@
 		console.log('Bank worker wound!');
 	}
 
+	function renegadeAppearances() {
+		// ...
+	}
+
+	function dollarShootingFx() {
+		// ...
+	}
+
+	function flashBombFx() {
+		// ...
+	}
+
+	function selectDoors() {
+		// ...
+	}
+
+	function completedTransaction() {
+		// ...
+	}
+
 	function gameOver() {
 		alert('Game Over');
 	}
