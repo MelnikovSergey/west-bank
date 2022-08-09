@@ -1,5 +1,6 @@
 (function(id) {
 
+	// Open/close door func waiting for refactoring 
 	function openDoor(elem){
 		if(elem.length) {
 		  for(var i = 0; i < elem.length; i++) {
@@ -72,6 +73,7 @@
 	function createCustomersArray() {
 		for(var i = 0; i < 3; i++) {
 			roundCustomersArray[i] = customersArray[selectRandomCustomer()];
+			console.log(roundCustomersArray[i]);
 		}
 	}	
 
@@ -201,28 +203,56 @@
 		setTimeout(output, clock);
 
 		roundStatistics++;
-		console.log('Round ' + roundStatistics + ' is done!');
 	}
 
 	output = function() {
-		if(true) {
-			// ...
-			// ...
-			closeSelectDoors(selectDoorsNumber);
-			setTimeout(restartRound, clock);
+
+		if(checkRoundResult() === true) {
+			// adding money to the bank storage
 		} else {
 			bankWorkerWound();
 			bankWorkerCount--;
 		}
+
+		closeSelectDoors(selectDoorsNumber);
+		setTimeout(restartRound, clock);
+
+		console.log('Round ' + roundStatistics + ' is done!');
 	}
 
 	restartRound = function() { 
 		startGame();
 	}
+	  
+	// Check the bank worker to cope with the renegades and all bandito
+	function checkRoundResult() {
+		var result = true;
+
+		if(selectDoorsNumber <= 2) {
+			if(check(selectDoorsNumber) === true ) result = false;
+		} else {
+			var indexArray = [ 0, 1, 2, [0, 1], [0, 2], [1, 2], [0, 1, 2] ];
+			var checkArray = indexArray[selectDoorsNumber]; 
+			
+			for(var i = 0; i <= checkArray.length; i++) {
+				if(check(i) === true) {
+					result = false;
+					break;
+				}
+			}
+		}
+
+		function check(index) {
+			var result = Number(roundCustomersArray.indexOf(bandit, index)) > -1 ? true : false;
+			return result;
+		}
+		
+		return result;	
+	}
 
 	function bankWorkerWound() {
-		bank.className += 'wound';
-		console.log('Bank worker wound!');
+		bank.className = 'wound';
+		console.log('Bang-bang!!! Bank worker wound!!!');
 	}
 
 	function renegadeAppearances() {
@@ -250,7 +280,8 @@
 	}
 	
 	function startGame() {
-		if(bankWorkerCount > 0 && roundStatistics < 12) {
+		if(bankWorkerCount > 0) {
+			bank.className = '';
 			roundCustomersArray = new Array(3);
 			startNewRound();
 		} else {
