@@ -121,7 +121,6 @@ tr .dollar {
 	opacity: .38;
 	z-index: 100;
 	filter: alpha(opacity=38);
-	zoom: 1;  /* Fix for IE7 */
 }
 
 .sprite_door:hover {
@@ -193,18 +192,21 @@ tr .dollar {
 	margin: 0;
 	padding: 0;
 	height: 75px;
-	color: #ffffff;
+	color: #000;
+	font-size: 0;
 	border: 1px solid #069;
 }
 
 .score {
 	float: left;
-	padding-left: 12px;
+	margin-top: 18px;
+	padding-left: 32px;
 }
 
 .lives {
 	float: right;
-	padding-right: 12px;
+	margin-top: 18px;
+	padding-right: 32px;
 }
 
 .left_section {
@@ -217,10 +219,46 @@ tr .dollar {
 	padding-left: 5px;
 }
 
-#start {
-	margin: 12px 0;
+p.score {
+	width: 32px;
+	height: 18px;
+	display: block;
+	margin-left: 2px;
+	margin-right: 2px;
+	background-image: url(images/sprite_xl.png);
+	background-position: 0px -86px;
+	background-repeat: no-repeat;
 }
 
-#pause {
-	margin-left: 5px;
+p.lives {
+	width: 34px;
+	height: 18px;
+	display: block;
+	background-image: url(images/sprite_xl.png);
+	background-position: -80px -86px;
+	background-repeat: no-repeat;
+}
+
+.score .right_section span {
+	width: 12px;
+	height: 18px;
+	margin-top: 18px;
+	display: inline-block;
+	background-image: url(images/sprite_xl.png);
+	background-position: -64px -86px;
+	background-repeat: no-repeat;
+}
+
+.lives .right_section span {
+	width: 18px;
+	height: 42px;
+	margin: 0 2px;
+	display: inline-block;
+	background-image: url(images/sprite_xl.png);
+	background-position: -4px -38px;
+	background-repeat: no-repeat;
+}
+
+#start {
+	margin: 12px 0;
 }
