@@ -67,6 +67,10 @@
 
 	function selectRandomCustomer() {
 		var randomCustomer = getRandomInt(0, 6);
+		
+		___testRandomCustomer[ ___testRandomCustomerStep] = randomCustomer;
+		___testRandomCustomerStep++;		
+
 		return randomCustomer;	
 	}
 
@@ -84,6 +88,41 @@
 		customer2.className += " " + roundCustomersArray[1].cssClass;
 		customer3.className += " " + roundCustomersArray[2].cssClass;
 	}
+
+/*
+	function customerAnimate(person){
+		var x = 0;
+
+		function frame(){
+			x -= 114;
+			person.style.backgroundPositionX = x + 'px';
+			if(x == -228){
+				clearInterval(timer);
+			}
+		}
+		var timer = setInterval(frame, 350);
+	}
+
+
+	function customerAnimate(person, personDoor){
+		var x, i = 0; 
+
+		function frame() {
+			x = person.positionsData[i];
+			personDoor.style.backgroundPositionX = x + 'px';
+
+			console.log(personDoor.style.backgroundPositionX);
+
+			if(i <= person.positionsDataLength){
+				clearInterval(timer);
+			}
+			
+			i++;
+		}
+
+		var timer = setInterval(frame, 200);
+	}
+*/
 
 	function customerAnimate(person, personDoor, time, fps) {
 
@@ -138,6 +177,9 @@
 	var bankWorkerCount = 3;
 	var roundStatistics = 0;
 	var selectDoorsNumber = null;
+
+	var ___testRandomCustomer = new Array(3);
+	var ___testRandomCustomerStep = 0;
 
 	// Game Zone
 	var bank = document.getElementById('container');
@@ -260,6 +302,12 @@
 		bank.className = 'wound';
 		bankWorkerArray[n].style.display = 'none';
 		console.log('Bang-bang!!! Bank worker wound!!!');
+
+		console.log('*** Информация для отладки ***');
+		console.log('Колличество персонажей: ' + ___testRandomCustomer);
+		console.log('Массив дверей: ' + selectDoorsNumber);
+		console.log('******************************');
+
 	}
 
 	function renegadeAppearances() {

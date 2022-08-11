@@ -57,6 +57,20 @@ tr .dollar {
 	height: 24px;
 }
 
+.dollar {
+	font-size: 0;
+	background-image: url(images/dollar_xl.gif);
+	background-position: -3px 0px;
+	background-repeat: no-repeat;
+}
+
+.active {
+	font-size: 0;
+	background-image: url(images/dollar_xl.gif);
+	background-position: -3px -28px;
+	background-repeat: no-repeat;
+}
+
 #dollar_center {
 	margin: 0 auto; 
 	padding: 0;
