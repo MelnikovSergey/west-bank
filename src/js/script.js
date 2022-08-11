@@ -149,6 +149,13 @@
 
 	var doorsArray = [ door1, door2, door3, [door1, door2], [door1, door3], [door2, door3], [door1, door2, door3] ];
 	
+	// Bank worker wound
+	var bankWorkerArray = new Array(3);
+	
+	for(var i = 0; i < bankWorkerCount; i++) {
+		bankWorkerArray[i] = document.getElementById(i + 1);
+	}
+
 	// Customers, Banditos, Crazy kid with bomb
 	var customer1 = document.getElementById('people_1');
 	var customer2 = document.getElementById('people_2');
@@ -210,8 +217,7 @@
 		if(checkRoundResult() === true) {
 			// adding money to the bank storage
 		} else {
-			bankWorkerWound();
-			bankWorkerCount--;
+			bankWorkerWound(--bankWorkerCount);
 		}
 
 		closeSelectDoors(selectDoorsNumber);
@@ -250,8 +256,9 @@
 		return result;	
 	}
 
-	function bankWorkerWound() {
+	function bankWorkerWound(n) {
 		bank.className = 'wound';
+		bankWorkerArray[n].style.display = 'none';
 		console.log('Bang-bang!!! Bank worker wound!!!');
 	}
 
