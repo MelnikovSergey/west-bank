@@ -184,6 +184,7 @@ tr .dollar {
 	margin: 0;
 	padding: 0;
 	height: 56px;
+	position: relative;
 	background-image: url(images/bank.gif);
 	background-repeat: repeat-x;
 }
@@ -256,6 +257,39 @@ p.lives {
 	display: inline-block;
 	background-image: url(images/sprite_xl.png);
 	background-position: -4px -38px;
+	background-repeat: no-repeat;
+}
+
+.pay-desk-item-1 {
+	position: absolute;
+	top: 26px;
+	left: 45px;
+	width: 60px;
+	height: 30px;
+	background-image: url(images/sprite_xl.png);
+	background-position: 0 -5px;
+	background-repeat: no-repeat;
+}
+
+.pay-desk-item-2 {
+	position: absolute;
+	top: 24px;
+	left: 253px;
+	width: 88px;
+	height: 32px;
+	background-image: url(images/sprite_xl.png);
+	background-position: -57px 0;
+	background-repeat: no-repeat;
+}
+
+.pay-desk-item-3 {
+	position: absolute;
+	top: 26px;
+	right: 64px;
+	width: 48px;
+	height: 30px;
+	background-image: url(images/sprite_xl.png);
+	background-position: -68px -47px;
 	background-repeat: no-repeat;
 }
 
