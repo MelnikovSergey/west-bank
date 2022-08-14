@@ -1,7 +1,7 @@
 (function(id) {
 
 	// Open/close door func waiting for refactoring 
-	function openDoor(elem){
+	function openDoor(elem) {
 		if(elem.length) {
 		  for(var i = 0; i < elem.length; i++) {
 		    make(elem[i]);
@@ -13,10 +13,10 @@
 		function make(elem) {
 			var y = 0;
 	
-			function frame(){
+			function frame() {
 				y -= 186;
 				elem.style.backgroundPositionY = y + 'px';
-				if(y == -186*3){
+				if(y == -186*3) {
 					clearInterval(timer);
 				}
 			}
@@ -37,10 +37,10 @@
 		function make(elem) {
 			var y = -372;
 		
-			function frame(){
+			function frame() {
 				y += 186;
 				elem.style.backgroundPositionY = y + 'px';
-				if(y == 0){
+				if(y == 0) {
 					clearInterval(timer);
 				}
 			}

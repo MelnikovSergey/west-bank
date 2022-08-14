@@ -137,11 +137,9 @@ tr .dollar {
 }
 
 .wound {
-	background-color: #ff0000;
-	-moz-opacity: 0.38;
-	opacity: .38;
+	background-image: url(images/px.gif);
+	background-repeat: repeat;
 	z-index: 100;
-	filter: alpha(opacity=38);
 }
 
 .sprite_door:hover {
