@@ -280,6 +280,12 @@
 
 		var on = function() { 
 			bank.style.backgroundColor = '#000';
+			
+			// IE7, IE8 Effect
+			door1.style.filter = "";
+			door2.style.filter = "";
+			door3.style.filter = "";
+
 			flash--;
 
 			clock = setTimeout(off, 200);
@@ -291,6 +297,12 @@
 
 		var off = function() { 
 			bank.style.backgroundColor = '#fff';
+
+			// IE7, IE8 Effect
+			door1.style.filter = "Invert";
+			door2.style.filter = "Invert";
+			door3.style.filter = "Invert";
+
 			clock = setTimeout(on, 200);
 		}
 
