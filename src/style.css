@@ -19,6 +19,13 @@ body {
 	border: 6px solid #fff;
 }
 
+#screensaver {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
 #top {
 	margin: 0;
 	padding: 0;
