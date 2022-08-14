@@ -245,7 +245,7 @@ p.score {
 	display: block;
 	margin-left: 2px;
 	margin-right: 2px;
-	background-image: url(images/sprite_xl.png);
+	background-image: url(images/sprite_xl.gif);
 	background-position: 0px -86px;
 	background-repeat: no-repeat;
 }
@@ -254,7 +254,7 @@ p.lives {
 	width: 34px;
 	height: 18px;
 	display: block;
-	background-image: url(images/sprite_xl.png);
+	background-image: url(images/sprite_xl.gif);
 	background-position: -80px -86px;
 	background-repeat: no-repeat;
 }
@@ -264,7 +264,7 @@ p.lives {
 	height: 18px;
 	margin-top: 18px;
 	display: inline-block;
-	background-image: url(images/sprite_xl.png);
+	background-image: url(images/sprite_xl.gif);
 	background-position: -64px -86px;
 	background-repeat: no-repeat;
 }
@@ -274,7 +274,7 @@ p.lives {
 	height: 42px;
 	margin: 0 2px;
 	display: inline-block;
-	background-image: url(images/sprite_xl.png);
+	background-image: url(images/sprite_xl.gif);
 	background-position: -4px -38px;
 	background-repeat: no-repeat;
 }
@@ -285,8 +285,20 @@ p.lives {
 	left: 45px;
 	width: 60px;
 	height: 30px;
-	background-image: url(images/sprite_xl.png);
+	background-image: url(images/sprite_xl.gif);
 	background-position: 0 -5px;
+	background-repeat: no-repeat;
+}
+
+.pay-desk-item-1:after {
+	content:'';
+	position: absolute;
+	top: 1px;
+	right: -62px;
+	width: 24px;
+	height: 30px;
+	background-image: url(images/sprite_xl.gif);
+	background-position: -92px -47px;
 	background-repeat: no-repeat;
 }
 
@@ -296,8 +308,20 @@ p.lives {
 	left: 253px;
 	width: 88px;
 	height: 32px;
-	background-image: url(images/sprite_xl.png);
+	background-image: url(images/sprite_xl.gif);
 	background-position: -57px 0;
+	background-repeat: no-repeat;
+}
+
+.pay-desk-item-2:before {
+	content:'';
+	position: absolute;
+	top: 2px;
+	right: 96px;
+	width: 24px;
+	height: 30px;
+	background-image: url(images/sprite_xl.gif);
+	background-position: -92px -47px;
 	background-repeat: no-repeat;
 }
 
@@ -307,8 +331,32 @@ p.lives {
 	right: 64px;
 	width: 48px;
 	height: 30px;
-	background-image: url(images/sprite_xl.png);
+	background-image: url(images/sprite_xl.gif);
 	background-position: -68px -47px;
+	background-repeat: no-repeat;
+}
+
+.pay-desk-item-3:before {
+	content:'';
+	position: absolute;
+	top: 0px;
+	right: 65px;
+	width: 24px;
+	height: 30px;
+	background-image: url(images/sprite_xl.gif);
+	background-position: -92px -47px;
+	background-repeat: no-repeat;
+}
+
+.pay-desk-item-3:after {
+	content:'';
+	position: absolute;
+	top: 1px;
+	right: -45px;
+	width: 24px;
+	height: 30px;
+	background-image: url(images/sprite_xl.gif);
+	background-position: -92px -47px;
 	background-repeat: no-repeat;
 }
 
