@@ -141,6 +141,7 @@
 
 	// Game Zone
 	var bank = document.getElementById('container');
+	var bang = document.getElementById('bang');
 
 	// Doors
 	var door1 = document.getElementById('sprite_1');
@@ -162,39 +163,27 @@
 	var customer3 = document.getElementById('people_3');	
 
 	// Customers data: start position, step, final position
-	var bandit = { 
-		positionsData: [ 0, -114, -228  ],
-		positionsDataLength: 3,
-		cssClass: 'bandit' 
-	};
-
 	var woman = { 
-		positionsData: [ -684, -114, -798 ],
-		positionsDataLength: 3,
 		cssClass: 'woman' 
 	};
 
 	var man = { 
-		positionsData: [ -912, -114, -228 ],
-		positionsDataLength: 3,
 		cssClass: 'man' 
 	};
 
+	var bandit = { 
+		cssClass: 'bandit' 
+	};
+
 	var bombBoyBoomer = { 
-		positionsData: [ 0, -114, -912 ],
-		positionsDataLength: 3, 
 		cssClass: 'bombBoyBoomer' 
 	};
 
 	var dollarBoyBoomer = { 
-		positionsData: [ 0, 114, 912 ],
-		positionsDataLength: 3, 
 		cssClass: 'dollarBoyBoomer' 
 	};
 
 	var renegade = { 
-		positionsData: [ 0, 114, 228 ],
-		positionsDataLength: 3, 
 		cssClass: 'renegade' 
 	};
 
@@ -205,6 +194,13 @@
 	var startButton = document.getElementById('start');
 
 	function startNewRound() {
+
+		bank.className = '';
+			
+		customer1.className = 'sprite_people';
+		customer2.className = 'sprite_people';
+		customer3.className = 'sprite_people';
+
 		uploadCustomers();
 		openSelectDoors(selectRandomDoors());
 		setTimeout(output, clock);
@@ -309,6 +305,18 @@
 		on();
 	}
 
+	// Tmp expressions
+	var bangBtn = document.getElementById('bangBtn');
+	bangBtn.onclick = bangFx;
+
+	function bangFx() {
+		bang.style.zIndex = 100;
+
+		setTimeout(function(){
+			bang.style.zIndex = -1
+		}, 1000);
+	}
+
 	function selectDoors() {
 		// Take a decision on the number of doors
 	}
@@ -323,7 +331,6 @@
 	
 	function startGame() {
 		if(bankWorkerCount > 0) {
-			bank.className = '';
 			roundCustomersArray = new Array(3);
 			startNewRound();
 		} else {
