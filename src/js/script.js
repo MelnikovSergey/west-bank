@@ -150,6 +150,9 @@
 
 	var doorsArray = [ door1, door2, door3, [door1, door2], [door1, door3], [door2, door3], [door1, door2, door3] ];
 	
+	// Game UI
+	var scoreUI = document.getElementById('score');
+	
 	// Bank worker wound
 	var bankWorkerArray = new Array(3);
 	
@@ -315,6 +318,31 @@
 		setTimeout(function(){
 			bang.style.zIndex = -1
 		}, 1000);
+	}
+
+	// Tmp expressions
+	var scoreBtn = document.getElementById('scoreBtn');
+	scoreBtn.onclick = testDrawScores;
+	var testScore = 10;
+
+	function testDrawScores() {
+		drawScores(testScore); 
+		testScore += 10;
+	}
+
+	function createScoreString(num) {
+		var scoreString = '';
+		var strScore = String(num);
+
+		for(i = 0; i < strScore.length; i++) {
+			scoreString += '<span class="num_' + strScore[i] + '">' + strScore[i] + '</span>';
+		}
+
+		return scoreString;
+	}
+
+	function drawScores(score) {
+		scoreUI.innerHTML = createScoreString(score);
 	}
 
 	function selectDoors() {
