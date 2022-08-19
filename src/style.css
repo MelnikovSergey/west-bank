@@ -10,9 +10,8 @@ body {
 }
 
 #container {
-	position: absolute;
-	top: 0;
-	left: 28%;
+	position: relative;
+	margin: 20px auto;
 	padding: 20px;
 	width: 538px;
 	height: 464px;
