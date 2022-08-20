@@ -333,8 +333,17 @@
 	function createScoreString(num) {
 		var scoreString = '';
 		var strScore = String(num);
+		var strScoreLength = strScore.length;
 
-		for(i = 0; i < strScore.length; i++) {
+		if(strScoreLength < 6) {
+			var prefixNum = 6 - strScoreLength;
+
+			for(i = 0; i < prefixNum; i++) {
+				scoreString += '<span class="num_0">0</span>';
+			}			
+		}
+
+		for(i = 0; i < strScoreLength; i++) {
 			scoreString += '<span class="num_' + strScore[i] + '">' + strScore[i] + '</span>';
 		}
 
