@@ -152,6 +152,7 @@
 	
 	// Game UI
 	var scoreUI = document.getElementById('score');
+	var dollarUI = document.getElementById('dollar_block');
 	
 	// Bank worker wound
 	var bankWorkerArray = new Array(3);
@@ -317,6 +318,30 @@
 
 		setTimeout(function(){
 			bang.style.zIndex = -1
+		}, 1000);
+	}
+
+	// Tmp expressions
+	var dollarBtn = document.getElementById('dollarBtn');
+	dollarBtn.onclick = dollarFx;
+
+	function dollarFx() {
+
+		var step = 0;
+
+		function frame() {
+			step += 18;
+			dollarUI.style.top = step + 'px';
+
+			if(step == 18) {
+				clearInterval(timer);
+			}
+		}
+
+		var timer = setInterval(frame, 100);
+
+		setTimeout(function(){
+			dollarUI.style.top = '-108px';
 		}, 1000);
 	}
 

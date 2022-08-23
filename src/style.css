@@ -46,7 +46,8 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 50px;
-	border: 1px solid #069;
+	position: relative;
+	z-index: 2;
 }
 
 table {
@@ -56,12 +57,12 @@ table {
 
 #left {
 	float: left;
-	margin-left: 24px;
+	margin-left: 2px;
 }
 
 #right {
-	float:right;
-	margin-right:24px;
+	float: right;
+	margin-right: 2px;
 }
 
 tr,th {
@@ -94,12 +95,41 @@ tr .dollar {
 	background-repeat: no-repeat;
 }
 
-#dollar_center {
+#top_center-block {
+	position: relative;
 	margin: 0 auto; 
 	padding: 0;
 	width: 52px;
 	height: 48px;
-	background-image: url(images/top.gif);
+	background-image: url(images/sprite.gif);
+	background-position: -148px 0px;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+#dollar_window {
+	position: absolute;
+	top: 16px;
+	left: 50%;
+	width: 32px;
+	height: 32px;
+	margin-left: -16px;
+	background-image: url(images/yellow_px.gif);
+	background-repeat: repeat;
+	z-index: 1;
+}
+
+#dollar_block {
+	position: absolute;
+	top: -108px;
+	left: 50%; 
+	width: 18px;
+	height: 28px;
+	margin-left: -9px;
+	background-image: url(images/sprite.gif);
+	background-position: -165px -55px;
+	background-repeat: no-repeat;
+	z-index: 1;
 }
 
 #game_zone {
@@ -161,7 +191,7 @@ tr .dollar {
 }
 
 .wound {
-	background-image: url(images/px.gif);
+	background-image: url(images/red_px.gif);
 	background-repeat: repeat;
 	z-index: 100;
 }
@@ -177,42 +207,42 @@ tr .dollar {
 
 #sprite_1 {
 	position: absolute;
-	top: 86px;
+	top: 84px;
 	left: 64px;
 	z-index: 2;
 }
 
 #sprite_2 {
 	position: absolute;
-	top: 86px;
+	top: 84px;
 	left: 232px;
 	z-index: 2;
 }
 
 #sprite_3 {
 	position: absolute;
-	top: 86px;
+	top: 84px;
 	left: 400px;
 	z-index: 2;
 }
 
 #people_1 {
 	position: absolute;
-	top: 86px;
+	top: 84px;
 	left: 64px;
 	z-index: 1;
 }
 
 #people_2 {
 	position: absolute;
-	top: 86px;
+	top: 84px;
 	left: 232px;
 	z-index: 1;
 }
 
 #people_3 {
 	position: absolute;
-	top: 86px;
+	top: 84px;
 	left: 400px;
 	z-index: 1;
 }
@@ -269,7 +299,7 @@ p.score {
 	display: block;
 	margin-left: 2px;
 	margin-right: 2px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: 0px -86px;
 	background-repeat: no-repeat;
 }
@@ -278,7 +308,7 @@ p.lives {
 	width: 34px;
 	height: 18px;
 	display: block;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -80px -86px;
 	background-repeat: no-repeat;
 }
@@ -337,7 +367,7 @@ p.lives {
 	height: 42px;
 	margin: 0 2px;
 	display: inline-block;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -4px -38px;
 	background-repeat: no-repeat;
 }
@@ -348,7 +378,7 @@ p.lives {
 	left: 45px;
 	width: 60px;
 	height: 30px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: 0 -5px;
 	background-repeat: no-repeat;
 }
@@ -360,7 +390,7 @@ p.lives {
 	right: -62px;
 	width: 24px;
 	height: 30px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -92px -47px;
 	background-repeat: no-repeat;
 }
@@ -371,7 +401,7 @@ p.lives {
 	left: 253px;
 	width: 88px;
 	height: 32px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -57px 0;
 	background-repeat: no-repeat;
 }
@@ -383,7 +413,7 @@ p.lives {
 	right: 96px;
 	width: 24px;
 	height: 30px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -92px -47px;
 	background-repeat: no-repeat;
 }
@@ -394,7 +424,7 @@ p.lives {
 	right: 64px;
 	width: 48px;
 	height: 30px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -68px -47px;
 	background-repeat: no-repeat;
 }
@@ -406,7 +436,7 @@ p.lives {
 	right: 65px;
 	width: 24px;
 	height: 30px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -92px -47px;
 	background-repeat: no-repeat;
 }
@@ -418,7 +448,7 @@ p.lives {
 	right: -45px;
 	width: 24px;
 	height: 30px;
-	background-image: url(images/sprite_xl.gif);
+	background-image: url(images/sprite.gif);
 	background-position: -92px -47px;
 	background-repeat: no-repeat;
 }
