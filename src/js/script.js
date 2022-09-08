@@ -152,7 +152,6 @@
 	
 	// Game UI
 	var scoreUI = document.getElementById('score');
-	var dollarUI = document.getElementById('dollar_block');
 	
 	// Bank worker wound
 	var bankWorkerArray = new Array(3);
@@ -215,7 +214,7 @@
 	output = function() {
 
 		if(checkRoundResult() === true) {
-			// adding money to the bank storage
+			completedTransaction();
 		} else {
 			bankWorkerWound(--bankWorkerCount);
 		}
@@ -322,28 +321,8 @@
 	}
 
 	// Tmp expressions
-	var dollarBtn = document.getElementById('dollarBtn');
-	dollarBtn.onclick = dollarFx;
-
-	function dollarFx() {
-
-		var step = 0;
-
-		function frame() {
-			step += 18;
-			dollarUI.style.top = step + 'px';
-
-			if(step == 18) {
-				clearInterval(timer);
-			}
-		}
-
-		var timer = setInterval(frame, 100);
-
-		setTimeout(function(){
-			dollarUI.style.top = '-108px';
-		}, 1000);
-	}
+	var transactionBtn = document.getElementById('transactionBtn');
+	transactionBtn.onclick = completedTransaction;
 
 	// Tmp expressions
 	var scoreBtn = document.getElementById('scoreBtn');
@@ -384,7 +363,11 @@
 	}
 
 	function completedTransaction() {
-		// ...
+		transaction_block.style.zIndex = 100;
+
+		setTimeout(function(){
+			transaction_block.style.zIndex = -1;
+		}, 1000);
 	}
 
 	function gameOver() {

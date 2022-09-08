@@ -107,7 +107,7 @@ tr .dollar {
 	z-index: 2;
 }
 
-#dollar_window {
+#transaction_window {
 	position: absolute;
 	top: 16px;
 	left: 50%;
@@ -119,17 +119,16 @@ tr .dollar {
 	z-index: 1;
 }
 
-#dollar_block {
+#transaction_block {
 	position: absolute;
-	top: -108px;
+	top: 16px;
 	left: 50%; 
-	width: 18px;
-	height: 28px;
-	margin-left: -9px;
-	background-image: url(images/sprite.gif);
-	background-position: -165px -55px;
+	width: 32px;
+	height: 32px;
+	margin-left: -16px;
+	background-image: url(images/transaction.gif);
 	background-repeat: no-repeat;
-	z-index: 1;
+	z-index: -1;
 }
 
 #game_zone {
