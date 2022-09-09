@@ -214,6 +214,7 @@
 	output = function() {
 
 		if(checkRoundResult() === true) {
+			// adding money to the bank storage
 			completedTransaction();
 		} else {
 			bankWorkerWound(--bankWorkerCount);
